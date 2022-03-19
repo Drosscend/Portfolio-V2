@@ -8,25 +8,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="author" content="Kévin Véronési" />
-  <meta name="theme-color" content="#FFD152" />
+  <meta name="theme-color" content="#6e57e0" />
 
   <!-- Metadata -->
-  <title>Générateur de mot de passe aléatoire</title>
-  <link rel="canonical" href="https://kevin-dev.me" />
-  <meta name="twitter:title" content="Générateur de mot de passe aléatoire" />
-  <meta property="og:title" content="Générateur de mot de passe aléatoire" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://kevin-dev.me/Projets/Random_Password_Generator/index.html" />
+  <meta name="description"
+    content="Sur ce site vous pouvez retrouver des informations à propos de moi comme mon CV, mes différents projets, mes passions et un espace pour me contacter." />
+  <meta name="keywords" content="Mentions légales - Légal kevin-dev.me" />
+  <meta property="og:description"
+    content="Sur ce site vous pouvez retrouver des informations à propos de moi comme mon CV, mes différents projets, mes passions et un espace pour me contacter." />
+  <meta property="og:image" content="/assets/img/about.jpg" />
   <meta property="og:site_name" content="Kevin-dev" />
 
-  <!-- Favicon && Apple Icons -->
-  <link rel="icon" type="image/png" href="/data/img/logo.jpg" />
-  <link rel="apple-touch-icon" href="/data/img/logo.jpg" type="image/png" />
+  <title>Générateur de mot de passe aléatoire</title>
 
   <!-- css -->
-  <link rel="stylesheet" href="/data/css/normalize.css" />
-  <link rel="stylesheet" href="/data/css/base.css" />
-  <link rel="stylesheet" href="/Projets/Random_Password_Generator/data/css/style.css">
+  <link rel="stylesheet" href="data/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
 </head>
 
 <body>
@@ -37,7 +34,27 @@
     <div id="btn" onclick="getPassword();">Générer le mot de passe</div>
   </div>
 
-  <script src="data/js/script.js"></script>
+  <script>
+    function getPassword() {
+      var chars =
+        "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN!@#$%^&*()_+?><:{}[]-.";
+      var passwordLength = 16;
+      var password = "";
+
+      for (var i = 0; i < passwordLength; i++) {
+        var randomNumber = Math.floor(Math.random() * chars.length);
+        password += chars.substring(randomNumber, randomNumber + 1);
+      }
+      document.getElementById("password").value = password;
+    }
+
+    function copyPassword() {
+      var copyPassText = document.getElementById("password");
+      copyPassText.select();
+      copyPassText.setSelectionRange(0, 9999);
+      document.execCommand("copy");
+    }
+  </script>
 
 </body>
 
