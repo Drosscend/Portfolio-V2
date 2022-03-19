@@ -695,6 +695,9 @@ img {
   color: #fff;
 }
 
+.link{
+  color: var(--first-color-lighter);
+}
 /*========== SCROLL UP ==========*/
 .scrollup{
   position: fixed;
