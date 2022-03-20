@@ -23,11 +23,31 @@
   <link rel="apple-touch-icon" href="/assets/img/about.jpg" type="image/jpg" />
 
   <!-- css -->
-  <link rel="stylesheet" href="/Pages_supp/Mentions_légales/data/css/style.css" />
-  <link rel="stylesheet" href="/Pages_supp/Mentions_légales/data/css/reponsive.css" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+ <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
-
+<style>
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.box{
+    border: #6e57e0 solid 3px;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 4px 10px 23px -3px #6e57e07e;
+}
+p{
+    margin-bottom: 1rem;
+}
+@media screen and (max-width: 734px){
+  .box{
+      margin: 1em;
+  }
+}
+</style>
 <body>
   <div class="box">
     <h1>Mentions légales</h1>
