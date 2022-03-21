@@ -135,3 +135,15 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*==================== AUTO AGE UPDATE ====================*/
+const ageSpan = document.querySelector('.age');
+
+const birthday = "08/04/2002";
+const birthdayDate = new Date(birthday);
+
+const today = new Date();
+
+const age = today.getFullYear() - birthdayDate.getFullYear();
+
+ageSpan.innerHTML = age;
