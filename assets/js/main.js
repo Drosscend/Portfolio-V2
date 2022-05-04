@@ -136,6 +136,23 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+const query = window.matchMedia('(prefers-color-scheme: dark)')
+
+
+query.addEventListener('change', e => {
+    if (e.matches) {
+        document.body.classList.add(darkTheme)
+        themeButton.classList.add(iconTheme)
+        localStorage.setItem('selected-theme', 'dark')
+        localStorage.setItem('selected-icon', 'uil-moon')
+    } else {
+        document.body.classList.remove(darkTheme)
+        themeButton.classList.remove(iconTheme)
+        localStorage.setItem('selected-theme', 'light')
+        localStorage.setItem('selected-icon', 'uil-sun')
+    }
+})
+
 /*==================== AUTO AGE UPDATE ====================*/
 const ageSpan = document.querySelector('.age');
 

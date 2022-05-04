@@ -615,7 +615,7 @@ textarea {
 }
 
 .contact__icon{
-  font-size: rem;
+  font-size: 1.4rem;
   color: var(--first-color);
   margin-right: var(--mb-0-75);
 }
