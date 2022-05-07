@@ -143,16 +143,18 @@ themeButton.addEventListener('click', () => {
 const query = window.matchMedia('(prefers-color-scheme: dark)')
 
 function darkMode(e) {
-    if (e.matches) {
-        document.body.classList.add(darkTheme)
-        themeButton.classList.add(iconTheme)
-        localStorage.setItem('selected-theme', 'dark')
-        localStorage.setItem('selected-icon', 'uil-moon')
-    } else {
-        document.body.classList.remove(darkTheme)
-        themeButton.classList.remove(iconTheme)
-        localStorage.setItem('selected-theme', 'light')
-        localStorage.setItem('selected-icon', 'uil-sun')
+    if (!selectedTheme) {
+        if (e.matches) {
+            document.body.classList.add(darkTheme)
+            themeButton.classList.add(iconTheme)
+            localStorage.setItem('selected-theme', 'dark')
+            localStorage.setItem('selected-icon', 'uil-moon')
+        } else {
+            document.body.classList.remove(darkTheme)
+            themeButton.classList.remove(iconTheme)
+            localStorage.setItem('selected-theme', 'light')
+            localStorage.setItem('selected-icon', 'uil-sun')
+        }
     }
 }
 
