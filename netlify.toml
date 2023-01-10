@@ -2,3 +2,14 @@
   from = "/*"
   to = "/Pages_supp/redirection/404.html"
   status = 404
+
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+  exclude = [
+    './Projets/*',
+    './Pages_supp/*'
+  ]
+  changeFreq = "monthly"
+  priority = 0.9
