@@ -1,2 +1,4 @@
 .idea
 .fleet
+# Local Netlify folder
+.netlify
