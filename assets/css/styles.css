@@ -167,6 +167,10 @@ textarea {
   text-align: center;
 }
 
+.hide {
+  display: none;
+}
+
 /*==================== LAYOUT ====================*/
 .container {
   max-width: 768px;
