@@ -395,6 +395,7 @@ textarea {
   border-radius: 0.5rem;
   justify-self: center;
   align-self: center;
+  transform: scaleX(-1);
 }
 
 .about__description {
