@@ -513,12 +513,12 @@ textarea {
 .qualification__subtitle {
   display: inline-block;
   font-size: var(--small-font-size);
-  margin-bottom: var(--mb-1);
 }
 
 .qualification__calendar {
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
+  margin-bottom: var(--mb-1);
 }
 
 .qualification__rounder {
@@ -772,7 +772,7 @@ textarea {
   }
 
   .nav__menu{
-    padding: 2rem .25rem 4rem;
+    padding: 2rem .25rem 1rem;
   }
   .nav__list{
     column-gap: 0;
